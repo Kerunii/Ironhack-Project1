@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis:300,400,600,800|Lobster+Two:400,400i,700,700i&display=swap');
+
+html, body {
+    font-family: "Dosis";
+    font-size: 17px;
+}
+
+h1,h2 {
+    font-family: "Lobster Two";
+    color: #C0E5DE;;
+    text-shadow: 3px 3px #56646B;
+    padding: 20px 0;
+}
+
+.bg-green {
+    background-color: #C0E5DE;
+    color: #56646B;
+}
+
+.bg-dark {
+    background-color: #56646B;
+    color: #F6EDD9;
+}
+
+.bg-red {
+    background-color: #F46667;
+    color: #F6EDD9;
+}
+
+.bg-cream {
+    background-color: #F6EDD9;
+    color: #56646B;
+}
+
+.logo {
+    font-family: "Lobster Two";
+    font-weight: 400;
+    font-style: italic;
+    color: #56646B;
+    text-shadow: 2px 2px #F6EDD9;
+}
+
+.navbar {
+    color: #56646B;
+    font-weight: 600;
+    font-family: 'Lobster Two';
+}
+
+.navbar-nav .nav-item{
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.navbar-nav .nav-item .selected {
+    color: #56646B;
+}
+
+.navbar-nav .nav-item .nav-link:hover{
+    font-size: 1.2rem;
+    -webkit-transition-duration: 0.3s;
+    color: #F46667;
+}
+
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-image: url("/img/ham-menu-dark.svg");
+}
+
+.navbar-light .navbar-toggler-icon:hover {
+    background-image: url("/img/ham-menu-red.svg");
+    -webkit-transition-duration: 0.3s;
+}
+
+
+/* Grow */
+.hvr-grow {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+  }
+  .hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    color: #F46667;
+  }
+
+  section {
+      padding-top: 150px;
+  }
+
+
