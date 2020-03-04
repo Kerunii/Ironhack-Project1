@@ -16,12 +16,16 @@ const connectToApis = () => {
     .then (dataMovie => movieArray = dataMovie.results)
     .then (movieArrayData => movie = movieArrayData[randomMovie])
     .then (getElement => document.getElementById("movie").innerHTML = `
-    <div>
-        <img src="http://image.tmdb.org/t/p/w185//${movie.poster_path}" alt="poster-${movie.title}">
+    <div class="row">
+    <div class="col-sm-12 col-lg-4">
+    <img src="http://image.tmdb.org/t/p/w185//${movie.poster_path}" alt="poster-${movie.title}">
+    </div>
+    <div class="text-movie col-sm-12 col-lg-4">
         <h3>${movie.title}</h3>
         <p><span>Año: ${movie.release_date.split("-")[0]}</span> <span>Puntuación :${movie.vote_average}</span></p>
         <h4>Sinopsis</h4>
         <p>${movie.overview}</p>
+    </div>
     </div>`)
     
     fetch(apiRecipeURL)

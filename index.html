@@ -21,40 +21,59 @@
 <body>
     <!-- Navbar -->
     <header class="bg-green fixed-top">
-        <nav id="nav" class="navbar navbar-expand-lg navbar-light">
-            <a class="navbar-brand" href="index.html"><h1 class="logo hvr-grow">.blanketNight</h1></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <!-- Logo -->
+                <a href="index.html">
+                    <h1 class="logo hvr-grow">.blanketNight</h1>
+                </a>
+
+            <!-- Hamburguesa -->
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"
+                aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
             </button>
-          
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link selected" href="index.html">Home<span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="signup.html">Regístrate</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="login.html">Inicia sesión</a>
-                </li>
-              </ul>
-            </div>
+            
+            <!-- Menu -->
+            <div class="collapse navbar-collapse" id="navbarSupportedContent-4">
+                <ul class="navbar-nav ml-auto">
+                  <li class="nav-item active">
+                    <a class="nav-link selected" href="index.html">.home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="signup.html">.regístrate</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="login.html">.iniciaSesión</a>
+                  </li>
+                </ul>
+              </div>
           </nav>
     </header>
-
-    <section class="bg-red" >
+    <!-- Palomitera section -->
+    <section id="welcome" class="bg-red" >
         <div class="container">
-            <div class=" col-sm-12 col-lg-6">
-                <h1><span class="logo">.blanketNight</span> te da la bienvenida</h1>
-                <h3>¿Quieres un plan de sofá y manta pero no sabes qué ver ni qué llevarte a la boca?</h3>
-            </div>
-
-            <div class="col-sm-12 col-lg-6">
-                    <a href="result.html" role="button" id="palomitera"><img src="img/palomitera.png" alt="btn-palomitera"></a>
-                    <h2>Pon en marcha la palomitera</h2>
-                    <p>Aprieta sobre la palomitera y ella escogerá por ti una película y una receta al azar.</p>
-            </div>
+            <article class="row">
+                <div class="col-md-8">
+                    <h1><span class="logo">.blanketNight</span> te da la bienvenida</h1>
+                    <h3>¿Quieres un plan de sofá y manta pero no sabes qué ver ni qué llevarte a la boca?</h3>
+                    <p>
+                        Entonces te encuentras en el lugar indicado. <br>
+                        Tienes ante ti un innovador sistema que aplica inteligencia artificial
+                        para elaborar el mejor plan para ti y los tuyos. <br>
+                        El sistema es simple:
+                        <ol id="steps">
+                            <li><span>1.</span> Acerca tu cursor, o tu dedo, a la palomitera</li>
+                            <li><span>2.</span> Prepárate para descubrir el mejor plan que la tecnología actual puede ofrecer</li>
+                            <li><span>3.</span> Haz "click" con el cursor o "tap" con el dedo sobre la palomitera</li>
+                        </ol>
+                        ¡Y a disfrutar!
+                    </p>
+                </div>
+    
+                <div class="col-md-4 palomitera">
+                    <a href="result.html" role="button" id="palomitera" ><img src="img/palomitera.png" alt="btn-palomitera"></a>
+                </div>
+            </article>
         </div>
     </section>
 
