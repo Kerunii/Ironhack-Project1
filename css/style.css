@@ -1,9 +1,14 @@
 @import url('https://fonts.googleapis.com/css?family=Dosis:300,400,600,800|Lobster+Two:400,400i,700,700i&display=swap');
 
 /* General */
+.url {
+    
+}
+
 html, body {
     font-family: "Dosis";
     font-size: 17px;
+    cursor:url(../img/cursor-palomita.gif), auto;
 }
 
 h1, h2 {
@@ -133,6 +138,16 @@ header {
     transform: scale(1.1);
     color: #F46667;
   }
+/* Animation pulsate */
+.pulsate-bck {
+    -webkit-animation: pulsate-bck 0.5s ease-in-out infinite both;
+    animation: pulsate-bck 1s ease-in-out infinite both;
+}
+/* Animation blurred */
+.slide-in-blurred-bottom {
+	-webkit-animation: slide-in-blurred-bottom 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+	        animation: slide-in-blurred-bottom 0.6s cubic-bezier(0.230, 1.000, 0.320, 1.000) both;
+}
 
 
 /* Section Welcome */
@@ -187,6 +202,11 @@ span.logo {
     
 }
 
+.palomitas-caen {
+    display: flex;
+    flex-direction: column;
+}
+
 
 /* Footer */
 footer {
@@ -200,6 +220,35 @@ footer > div {
     align-content: center;
 }
 
+ @-webkit-keyframes pulsate-bck {
+    0% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    50% {
+      -webkit-transform: scale(0.9);
+              transform: scale(0.9);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  @keyframes pulsate-bck {
+    0% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+    50% {
+      -webkit-transform: scale(0.9);
+              transform: scale(0.9);
+    }
+    100% {
+      -webkit-transform: scale(1);
+              transform: scale(1);
+    }
+  }
+  
 /* Media queries */
 @media (min-width: 992px) {
     .navbar-expand-lg {
