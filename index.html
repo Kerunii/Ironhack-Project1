@@ -20,10 +20,10 @@
 
 <body>
     <!-- Navbar -->
-    <header class="bg-green fixed-top">
+    <header class="bg-green">
         <nav class="navbar navbar-expand-lg navbar-light">
             <!-- Logo -->
-                <a href="index.html">
+                <a href="index.html" class="col-auto">
                     <h1 class="logo hvr-grow">.blanketNight</h1>
                 </a>
 
@@ -50,28 +50,28 @@
           </nav>
     </header>
     <!-- Palomitera section -->
-    <section id="welcome" class="bg-red" >
+    <section id="first-section" class="bg-red" >
         <div class="container">
             <article class="row">
-                <div class="col-md-8">
-                    <h1><span class="logo">.blanketNight</span> te da la bienvenida</h1>
+                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    <h1> <span class="logo">.blanketNight</span><br>te da la bienvenida</h1>
                     <h3>¿Quieres un plan de sofá y manta pero no sabes qué ver ni qué llevarte a la boca?</h3>
                     <p>
-                        Entonces te encuentras en el lugar indicado. <br>
+                        Entonces te encuentras en el lugar indicado.
                         Tienes ante ti un innovador sistema que aplica inteligencia artificial
                         para elaborar el mejor plan para ti y los tuyos. <br>
                         El sistema es simple:
                         <ol id="steps">
-                            <li><span>1.</span> Acerca tu cursor, o tu dedo, a la palomitera</li>
-                            <li><span>2.</span> Prepárate para descubrir el mejor plan que la tecnología actual puede ofrecer</li>
-                            <li><span>3.</span> Haz "click" con el cursor o "tap" con el dedo sobre la palomitera</li>
+                            <span>.step01</span><li> Acerca tu cursor, o tu dedo, a la palomitera</li>
+                            <span>.step02</span><li> Prepárate para descubrir el mejor plan que la tecnología actual puede ofrecer</li>
+                            <span>.step03</span><li> Haz "click" con el cursor o "tap" con el dedo sobre la palomitera</li>
                         </ol>
-                        ¡Y a disfrutar!
                     </p>
                 </div>
     
-                <div class="col-md-4 palomitera">
-                    <a href="result.html" role="button" id="palomitera" ><img src="img/palomitera.png" alt="btn-palomitera"></a>
+                <div id="palomitera" class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                    <a href="result.html" role="button" ><img src="img/palomitera.png" alt="btn-palomitera"></a>
+                    <h3>¡Y a disfrutar!</h3>
                 </div>
             </article>
         </div>

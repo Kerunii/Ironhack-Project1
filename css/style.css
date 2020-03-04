@@ -6,22 +6,32 @@ html, body {
     font-size: 17px;
 }
 
-h1,h2 {
+h1, h2 {
     font-family: "Lobster Two";
     color: #C0E5DE;;
     text-shadow: 3px 3px #56646B;
-    margin: 0;
 }
 
-a {
+h3 {
+    margin: 30px 0;
+}
+
+p {
+    margin: 30px 0;
+    padding: 0 30;
+    font-size: 1.1rem;
+}
+
+/* a {
     margin: 0;
     padding: 0;
-}
+} */
 
 /* Background */
 .bg-green {
     background-color: #C0E5DE;
     color: #56646B;
+    border-bottom: 3px solid #F6EDD9;
 }
 
 .bg-dark {
@@ -52,7 +62,13 @@ a {
     color: #56646B;
     font-weight: 600;
     font-family: 'Lobster Two';
-    margin: 0 20px;
+    margin: 0 10px;
+}
+
+header {
+    width: 100%;
+    position: fixed;
+    z-index: 100;
 }
 
 
@@ -120,31 +136,65 @@ a {
 
 
 /* Section Welcome */
-#welcome, #resultado {
-    padding: 15%  0%;
+#first-section {
+    padding-top: 71px;
 }
 
-#palomitera img {
-    width: 70%;
-}
-
-.palomitera {
+#first-section article {
+    padding: 70px 20px 40px 20px;
     display: flex;
+    flex-direction: row;
+    align-content: center;
+}
+#first-section h1, h2 {
+    text-align: center;
+}
+#first-section p , h3 {
+    text-align: justify;
+}
+
+#palomitera {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 70px 20px 40px 20px;
+}
+
+#steps {
+    display: flex;
+    flex-direction: column;
+    padding: 0 40px;
     align-items: center;
     text-align: center;
 }
 
 #steps span {
     font-family: 'lobster two';
-    margin-right: 3px;
     color: #C0E5DE;
-    text-shadow: 1px 1px #56646B;
+    text-shadow: 2px 2px #56646B;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 15px 0 10px 0;
+}
+
+span.logo {
+    font-size: 70px;
+    text-decoration: underline #C0E5DE dotted;
+    
+    
 }
 
 
 /* Footer */
+footer {
+    height: 100%;
+    border-top: 3px solid #C0E5DE;
+}
 footer > div {
-    padding: 30px;
+    padding: 40px;
     display: flex;
     justify-content: space-around;
     align-content: center;
