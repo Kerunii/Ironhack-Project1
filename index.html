@@ -20,13 +20,13 @@
 
 <body>
     <!-- Navbar -->
-    <header class="bg-green">
+    <header class="bg-green container-fluid">
         <nav class="navbar navbar-expand-lg navbar-light">
             <!-- Logo -->
-                <a href="index.html" class="col-auto">
-                    <h1 class="logo hvr-grow">.blanketNight</h1>
-                </a>
-
+            <a href="index.html" class="col-auto">
+                <h1 class="logo hvr-grow">.blanketNight</h1>
+            </a>
+            
             <!-- Hamburguesa -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-4"
                 aria-controls="navbarSupportedContent-4" aria-expanded="false" aria-label="Toggle navigation">
@@ -53,23 +53,23 @@
     <section id="first-section" class="bg-red" >
         <div class="container">
             <article class="row">
-                <div class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <div id="palomitera" class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
                     <h1> <span class="logo">.blanketNight</span><br>te da la bienvenida</h1>
                     <h3>¿Quieres un plan de sofá y manta pero no sabes qué ver ni qué llevarte a la boca?</h3>
                     <p>
                         Entonces te encuentras en el lugar indicado.
                         Tienes ante ti un innovador sistema que aplica inteligencia artificial
-                        para elaborar el mejor plan para ti y los tuyos. <br>
-                        El sistema es simple:
+                        para elaborar el mejor plan para ti y los tuyos.
+                        
                         <ol id="steps">
-                            <span>.step01</span><li> Acerca tu cursor, o tu dedo, a la palomitera</li>
-                            <span>.step02</span><li> Prepárate para descubrir el mejor plan que la tecnología actual puede ofrecer</li>
-                            <span>.step03</span><li> Haz "click" con el cursor o "tap" con el dedo sobre la palomitera</li>
+                            <span>.step01;</span><li> Acerca tu cursor, o tu dedo, a la palomitera.</li>
+                            <span>.step02;</span><li> Prepárate para descubrir el mejor plan que la tecnología actual puede ofrecer.</li>
+                            <span>.step03;</span><li> Haz "click" con el cursor o "tap" con el dedo sobre la palomitera.</li>
                         </ol>
                     </p>
                 </div>
     
-                <div id="palomitera" class="col-sm-12 col-md-6 col-lg-6 col-xl-6">
+                <div id="palomitera" class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
                     <a href="result.html" role="button" class="pulsate-bck palomitas-caen"><img src="img/palomitas.svg" alt=""><img src="img/palomitera.svg" alt="btn-palomitera"></a>
                     <h3>¡A disfrutar!</h3>
                 </div>
@@ -77,11 +77,19 @@
         </div>
     </section>
 
-    <footer class="bg-dark">
+    <footer class="bg-dark container-fluid">
         <div>
-            <span>Proyecto.01</span>
-            <span>Ironhack WDFT</span>
-            <span>Paula Marsal Zamora</span>
+            <div>
+                <h5>Ironhack WDFT:</h5>
+                <span>Proyecto.01 | Paula Marsal Zamora</span>
+            </div>
+            <div>
+                <img src="img/bn-favicon.svg" alt="mini-logo">
+            </div>
+            <div class="agradecimientos">
+                <h5>Agradecimientos:</h5>
+                <span>TA Júlia Canas | Alberte Hernández</span>
+            </div>
         </div>
     </footer>
     
@@ -89,7 +97,6 @@
 
  
     <!-- bootstrap -->
-
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
