@@ -56,14 +56,17 @@
                 <p>Crea tu espacio para guardar los planes que más te gustan.</p>
             </div>
             
-            <div class="form-wrapper">
-                <form class="signup-form" id="signup-form" action="">
+            <div class="form-wrapper col-sm-12 col-md-10 col-lg-8 col-xl-8">
+                <form class="signup-form container-form" id="signup-form" action="">
+                  <div>
                     <input type="text" id="name" placeholder="Nombre" autocomplete="off" required>
+                    
+                  </div>
                     <input type="email" id="email" placeholder="Correo elecrtónico" autocomplete="off" required>
                     <input type="password" id="password" placeholder="Contraseña" autocomplete="off" required>
                     <input type="password" id="repeat-password" placeholder="Contraseña" autocomplete="off" required>
 
-                    <button type="submit" class="button" id="login-button">Registrar</button>
+                    <button type="submit" class="button" id="signin-button">Registrar</button>
 
                 </form>
                 <div class="errors-container"></div>
@@ -72,10 +75,20 @@
         </main>
     </section>
 
-    <footer>
-        <p>Primer proyecto web developer Ironhack</p>
-        <p>Paula Marsal Zamora</p>
-        <p>Ilustraciones by Healz</p>
+    <footer class="bg-dark container-fluid">
+      <div>
+          <div>
+              <h5>Ironhack WDFT:</h5>
+              <span>Proyecto.01 | Paula Marsal Zamora</span>
+          </div>
+          <div>
+              <img src="img/bn-favicon.svg" alt="mini-logo">
+          </div>
+          <div class="agradecimientos">
+              <h5>Agradecimientos:</h5>
+              <span>TA Júlia Canas | Alberte Hernández</span>
+          </div>
+      </div>
     </footer>
     
     <!-- JS -->

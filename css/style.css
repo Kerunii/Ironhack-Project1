@@ -1,9 +1,6 @@
 @import url('https://fonts.googleapis.com/css?family=Dosis:300,400,600,800|Lobster+Two:400,400i,700,700i&display=swap');
 
 /* General */
-.url {
-    
-}
 
 html, body {
     font-family: "Dosis";
@@ -27,10 +24,9 @@ p {
     font-size: 1.1rem;
 }
 
-/* a {
-    margin: 0;
-    padding: 0;
-} */
+h5 {
+    font-size: 15px;
+}
 
 /* Background */
 .bg-green {
@@ -136,11 +132,11 @@ header {
     -webkit-transition-property: transform;
     transition-property: transform;
   }
-  .hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
-    -webkit-transform: scale(1.1);
-    transform: scale(1.1);
-    color: #F46667;
-  }
+.hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  color: #F46667;
+}
 /* Animation pulsate */
 .pulsate-bck {
     -webkit-animation: pulsate-bck 0.5s ease-in-out infinite both;
@@ -154,20 +150,20 @@ header {
 
 
 /* Section Welcome */
-#first-section {
+.first-section {
     padding-top: 71px;
 }
 
-#first-section article {
+.first-section article {
     padding: 40px 10px;
     display: flex;
     flex-direction: row;
     align-content: space-between;
 }
-#first-section h1, h2 {
+.first-section h1, h2 {
     text-align: center;
 }
-#first-section p , h3 {
+.first-section p , h3 {
     text-align: justify;
 }
 
@@ -221,6 +217,7 @@ footer {
     height: 100%;
     border-top: 3px solid #C0E5DE;
     padding: 20px;
+    font-size: 0.5rem;
 }
 footer > div {
     padding: 0 20px;
@@ -262,6 +259,84 @@ footer > div {
     }
   }
   
+  
+/* Registro */
+.title-login p {
+    text-align: center;
+} 
+ .first-section.bg-dark main {
+     padding: 20px 10px;
+     display: flex;
+     flex-direction: column;
+     align-content: space-between;
+     align-items: center;
+}
+
+.email-pass > label {
+    font-family: 'lobster two';
+    font-size: 1.3rem;
+    color: #F6EDD9;
+    text-indent: 0.2rem;
+    padding: 20px 0 5px 0;
+    text-decoration-line: underline;
+}
+
+.form-group small {
+    display: flex;
+    text-align: right;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+.title-login > h2 {
+    margin: 0;
+    padding: 30px 0 0 0;
+    text-align: center;
+}
+
+.submit-check {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.submit-check > label {
+    font-family: 'dosis';
+}
+
+.submit-check div {
+    margin-top: 20px;
+}
+
+.submit-check div > a {
+    color: #F46667;
+}
+
+.btn {
+    padding: 10px 100px;
+}
+
+/* bootstrap arranges */
+
+.btn-submit {
+    color: #F6EDD9;
+    background-color: transparent;
+    border-color: #F6EDD9;
+    font-family: 'dosis';
+    font-weight: 300;
+  }
+  
+.btn-submit:hover {
+    color: #56646B;
+    background-color: #C0E5DE;
+    border-color: #F6EDD9;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+}
+
+
+
+
 /* Media queries */
 @media (min-width: 992px) {
     .navbar-expand-lg {

@@ -10,8 +10,12 @@
     
     <!--CSS-->
     <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap-grid.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css">
+    <!-- Typo -->
+    <link href="https://fonts.googleapis.com/css?family=Dosis:300,400,600,800|Lobster+Two:400,400i,700,700i&display=swap" rel="stylesheet">
+    
     <title>.BlanketNight</title>
 </head>
 
@@ -47,41 +51,70 @@
       </nav>
   </header>
 
-    <section class="bg-dark">
-        <main class="main-forms">
-
-            <div>
-                <h2>Inicia sesión</h2>
-                <p>Accede a tu espacio para ver tus planes guardados.</p>
+    <section class="first-section bg-dark">
+        <main class="container">
+            <div class="column">
+                <div class="title-login col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                    <h2>Inicia sesión</h2>
+                    <p>Accede a tu espacio personal.</p>
+                </div>
             </div>
-            
-            <div class="form-wrapper">
-                <form action="">
-                    <input type="email" id="email" placeholder="Correo electrónico">
-                    <input type="password" id="password" placeholder="Contraseña">
-                    
-                    <input type="checkbox" id="recordar" name="recordar" value="recordar">
-                    <label for="recordar">Recordar mi usuario</label>
-
-                    <button type="submit" class="button" id="login-button">Entrar</button>
-                    
-                    <a href="#">¿Olvidaste la contraseña?</a>
+            <div class="form-wrapper col-sm-12 col-md-10 col-lg-8 col-xl-8">
+                <form class="login-form container-form" id="login-form">
+                    <div class="form-group">
+                        <div class="email-pass" id="container-email">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" class="form-control mx-sm-3" aria-describedby="emailHelpInline" placeholder="iron@avenger.cat">
+                            <small id="emailHelpInline" class="text-muted">
+                              El email debe ser viable o... ¡No pasarás!
+                            </small>
+                        </div>
+                        <div class="email-pass" id="container-password">
+                            <label for="password">Password</label>
+                            <input type="password" id="password" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="130220">
+                            <small id="passwordHelpInline" class="text-muted">
+                                La contraseña debe contener 6 carácteres.
+                              </small>
+                        </div>
+                        <div class="submit-check">
+                            <div class="custom-control custom-checkbox">
+                                <input type="checkbox" class="custom-control-input" id="rememberme">
+                                <label class="custom-control-label" for="rememberme">Recordar mi usuario</label>
+                            </div>
+                            <div class="flex-column" id="container-login-btn">
+                                <button type="submit" class="btn btn-submit hvr-grow" id="login-button">¡Ábrete sésamo!</button>
+                            </div>
+                            <div><a href="#">¿Olvidaste la contraseña?</a></div>
+                        </div>
+                    </div>
                 </form>
                 <div class="errors-container"></div>
-            </div>
+            </div> 
             
         </main>
     </section>
 
-    <footer>
-        <p>Primer proyecto web developer Ironhack</p>
-        <p>Paula Marsal Zamora</p>
-        <p>Ilustraciones by Healz</p>
+    <footer class="bg-dark container-fluid">
+        <div>
+            <div>
+                <h5>Ironhack WDFT:</h5>
+                <span>Proyecto.01 | Paula Marsal Zamora</span>
+            </div>
+            <div>
+                <img src="img/bn-favicon.svg" alt="mini-logo">
+            </div>
+            <div class="agradecimientos">
+                <h5>Agradecimientos:</h5>
+                <span>TA Júlia Canas | Alberte Hernández</span>
+            </div>
+        </div>
     </footer>
     
     <!-- JS -->
+    <!-- <script src="scripts/signup.js"></script> -->
     <script src="scripts/login.js"></script>
-    <!-- <script src="scripts/validator.js"></script> -->
+    <!-- <script src="scripts/User.js"></script> -->
+    <script src="scripts/Validator.js"></script>
     <!-- bootstrap -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>

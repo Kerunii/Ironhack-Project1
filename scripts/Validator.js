@@ -2,16 +2,13 @@
 
 // El validator define las funciones usadas en el login.js
 class Validator {
-    constructor(userName, email, password){
-        this.userName = userName;
+    constructor( email, password){
         this.email = email;
         this.password = password;
     }
 
     //UserName - si el usuario deja el area en blanco salta en false
-    checkUserName () {
-        return this.userName ? true : false;
-    }
+    
 
     //Email - carácteres y estructura válida
     checkEmail () {
@@ -28,7 +25,7 @@ class Validator {
             return true;
         }
     }
-    
+
     //Mensaje que se muestra al saltar error
     errorCreator (message, location) {
         let div = document.createElement("div"); //se crea un div en el HTML
@@ -47,8 +44,13 @@ class Validator {
 //clase derivada del Validator anterior para el signup.js
 class SignUpValidator extends Validator {
     constructor (userName, email, password, repeatPassword){
-        super(userName, email, password);
+        super( email, password);
+        this.userName = userName;
         this.repeatPassword = repeatPassword; //añadimos el valor de repeatPassword
+    }
+
+    checkUserName () {
+        return this.userName ? true : false;
     }
 
     //Busca en la DB si ya existe el usuario.email
@@ -80,22 +82,24 @@ class SignUpValidator extends Validator {
 
 //clase derivada del Validator anterior para el login.js
 class LogInValidator extends Validator {
-    constructor (){
-        super();
+    constructor (email, password){ //como no queremos heredar nada, se deja vacío y ya lo coge (los valores)
+        super(email, password);
     }
 
     //comprueba que el usuario ya exista en la DB
-    checkEmailInDB (string){
-        if (!userDB){
+    checkEmailAndPasswordInDB (userDB){
+        let answer = false;
+
+        if (!userDB) {
             return false;
-        }
-        else{
+        } else {
             userDB.forEach(user => {
-                if (user.email === string){
-                    return true;
+                console.log(this.email, user.email);
+                if (this.email === user.email && this.password === user.password){
+                    return answer = true;
                 }
             });
+            return answer;
         }
-        return false;
     }
-}
+} 

@@ -16,13 +16,21 @@ console.log(usersDB);
 
 //Botón submit - al hacer click invoca la función
 signUpButton.addEventListener("click", function(event){
+    console.log("Comprobar: el signUpButton funciona"); //--> no funciona porque necesita--> ver punto 0
+    console.log("Comprobar: qué es el 'event' del argumento"); //--> lista de propiedades del elemento
+    //0- parar el efecto por default del botón
     event.preventDefault();
+    //1- comprobar que los imputs sean válidos
+
+    //2- dependiendo si los imputs son válidos o no, lo guardas en la BD o muestras un error
+
     //deleteErrors **
     deleteErrors();
     //Si pasa la función de checkValidUser() * -> crea un usuario
     if (checkValidUser()){
         console.log("user registered");
         // *** createUser -> crea el usuario para guardarlo en la BD
+        //LLAMAR o INVOKAR el valor de los parámetros (parametro.valor)
         createUser(userName.value, email.value, password.value);
         let messageSuccess = document.createElement("div");
         messageSuccess.innerHTML = `
@@ -37,7 +45,7 @@ signUpButton.addEventListener("click", function(event){
 function checkValidUser() {
     // se define una variable que guarda el valor como objeto de los datos del usuario
     let signUpValidator = new SignUpValidator (userName.value, email.value, password.value, repeatPassword.value);
-    
+
     // definimos una variable del userDB que recupera en formato JSON el objeto guardado en la DB
     let usersDB = JSON.parse(localStorage.getItem('users'));
     let validUser = true;
@@ -88,4 +96,4 @@ function createUser (name, email, password) {
     }
     //para mandarlo a la BD, como no lee objetos, hay que transformarlo en string
     localStorage.setItem('users', JSON.stringify(usersDB));
-} 
+}  

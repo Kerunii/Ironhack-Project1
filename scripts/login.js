@@ -1,49 +1,45 @@
-let userName = document.getElementById("name");
-let password = document.getElementById("password");
-let logInButton = document.getElementById("log-in-button");
-let form = document.getElementById('login-form');
-let formWrapper = document.getElementsByClassName("form-wrapper")[0];
+// 1) seleccionar los inputs y guardarlos en variables
 
-let checkUser = () => {
-    let usersDB = JSON.parse(localStorage.getItem('users'))
-    counter = 0;
-    if (!usersDB) {
-        return false
-    } else usersDB.forEach(user => {
-        if (userName.value == user.name && password.value == user.password) {
-            counter++;
-        }
-    })
-    return counter === 1 ? true : false
-}
-let errorUser = () => {
-    let div = document.createElement("div")
-    div.innerHTML = " Incorrect user name or password "
-    div.setAttribute("class", "error")
-    form.appendChild(div)
-}
-let deleteErrors = () => {
-    errors = [...document.getElementsByClassName("error")]
-    for (i = 0; i < errors.length; i++) {
-        errors[i].remove()
-    }
-}
-let validationMessage = () => {
-    let div = document.createElement("div")
-    div.innerHTML = `<p class="info-text" href="game.html"> Hello ${userName.value}! <a class="info-text" href="game.html"> You can now tell people to fuck off with a card! </a></p>`
-    form.insertBefore(div, logInButton);
-    logInButton.remove()
-}
-let mainLogIn = () => {
+//2) añadir el evento onclick al botón con una función
+
+//3)esta funcion debe tener el prevent default
+
+//4) la funcion debe validar los inputs y compararlos con los de la base de datos
+
+let email = document.getElementById("email");
+let password = document.getElementById("password");
+console.log('maaaaaaaiiiiilllll',email);
+let form = document.querySelector("form");
+let formWrapper = document.getElementsByClassName("form-wrapper")[0];
+let logInButton = document.getElementById("login-button");
+
+let containerEmail = document.getElementById("container-email");
+let containerPassword = document.getElementById("container-password");
+let containerLoginBtn = document.getElementById("container-login-btn");
+let titleLogin = document.getElementsByClassName("title-login")[0];
+
+logInButton.addEventListener("click", function(event){
     event.preventDefault()
-    if (!checkUser()) {
-        errorUser()
+    if(checkValidUser()){
+        console.log("Valid User");
+    }
+});
+
+function checkValidUser() {
+    console.log(email.value);
+    let loginValidator = new LogInValidator(email.value, password.value);
+
+    let userDB = JSON.parse(localStorage.getItem("users"));
+
+    if(loginValidator.checkEmailAndPasswordInDB(userDB)) {
+        let messageSuccess = document.createElement("div");
+        messageSuccess.innerHTML = `
+            <div class="alert alert-success" role="alert">
+            <strong>¡Hecho!</strong> Ya formas parte de la comunidad de la manta.
+            </div>`;
+        titleLogin.appendChild(messageSuccess);
     } else {
-        validationMessage()
+        loginValidator.errorCreator("El usuario o la contraseña no están registrados.");
+        return false;
     }
 }
-logInButton.addEventListener("click", function (event) {
-    event.preventDefault()
-    deleteErrors();
-    mainLogIn();
-})
