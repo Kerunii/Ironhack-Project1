@@ -391,9 +391,7 @@ span.logo {
     text-align: center;
 
 }
-.error-class {
-    color: #F46667;
-}
+
 #mensaje-success {
     font-size: 40px;
     color:  #C0E5DE;
@@ -415,6 +413,7 @@ span.logo {
     align-content: space-between;
     align-items: center;
     justify-content: center;
+    border-bottom: 9px solid#F6EDD9;
 }
 
 #movie-section .title-login{
@@ -428,7 +427,8 @@ span.logo {
     font-size: 55px;
     font-weight: 900;
     font-style: italic;
-    text-decoration:underline;
+    text-decoration: underline;
+    padding-top: 20px;
 }
 
 #movie-section img {
@@ -451,16 +451,55 @@ article#movie {
     padding: 5% 0 5% 0;
 }
 
-.first-section.bg-red#recipe {
-    padding: 10% 10px;
-    height: 100%; 
-    display: flex;
-    flex-direction: column;
-    align-content: space-between;
-    align-items: center;
+.recipe-label {
+    text-align: center;
+    margin-top: 0;
 }
 
+#recipe #recipe-label > img {
+    background: url('${recipe.image}') no-repeat;
+    background-size: 3px;
+    width: 50%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
 
+article#recipe {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    padding: 0px 10px;
+}
+
+#palomitera.result-page {
+    margin: 0;
+    padding: 0 inherit;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#recipe-section p {
+    text-align: center;
+}
+
+div#palomitera.result-page {
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+div#palomitera > h3 {
+    text-align: center;
+}
+
+div#recipe-section {
+    margin-bottom: 90px;
+}
 
 
 

@@ -22,7 +22,7 @@ const connectToApis = () => {
         </div>
         <div class="text-movie col-sm-12 col-md-12 col-lg-7 col-xl-7">
             <h2>${movie.title}</h2>
-            <h4>.sinopsis{</h4>
+            <h4>.sinopsis</h4>
             <p>${movie.overview}</p>
             <p>Año:  ${movie.release_date.split("-")[0]} <br> Puntuación:  ${movie.vote_average}</p>
         </div>
@@ -33,12 +33,13 @@ const connectToApis = () => {
     .then (data => recipeArray = data.hits)
     .then (recipeData => recipe = recipeData[randomRecipe].recipe)
     .then (getElement => document.getElementById("recipe").innerHTML = `
-        <div class="row">
+        
             <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <h3 class="recipe-label">${recipe.label}</h3>
+                
                 <a href="${recipe.url}"><img class="img-fluid rounded-lg border border-white" src="${recipe.image}" alt="${recipe.source}"></a>
-                <h2>${recipe.label}</h2>
             </div>
-        </div>
+    
         `)
     .catch(function (error) {
         return error;
