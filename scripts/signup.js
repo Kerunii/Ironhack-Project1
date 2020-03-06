@@ -33,7 +33,7 @@ signUpButton.addEventListener("click", function(event){
         // *** createUser -> crea el usuario para guardarlo en la BD
         //LLAMAR o INVOKAR el valor de los parámetros (parametro.valor)
         createUser(userName.value, email.value, password.value);
-        let signUser = document.getElementById('mensaje-success').innerHTML = `¡Hecho! Ya formas parte de la comunidad de la manta.`;
+        document.getElementById('mensaje-success').innerHTML = `¡Hecho! Ya formas parte de la comunidad de la manta.`;
     }
 });
 
