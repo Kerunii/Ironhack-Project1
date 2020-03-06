@@ -47,31 +47,71 @@
       </nav>
   </header>
 
+    <section class="first-section bg-green">
+        <main class="container">
+          <div class="column">
 
-    <section class="bg-cream">
-        <main class="main-forms">
-
-            <div>
+            <div class="title-login col-sm-12 col-md-12 col-lg-12 col-xl-12">
                 <h2>Regístrate</h2>
-                <p>Crea tu espacio para guardar los planes que más te gustan.</p>
+                <p>Crea tu espacio para guardar los planes que más te gusten.</p>
+                <div id="mensaje-success" class="slide-in-blurred-bottom"role="alert"></div>
+                <div id="mensaje-error" class="error slide-in-blurred-bottom" role="alert"></div>
             </div>
-            
+
+          </div>
+
             <div class="form-wrapper col-sm-12 col-md-10 col-lg-8 col-xl-8">
-                <form class="signup-form container-form" id="signup-form" action="">
-                  <div>
-                    <input type="text" id="name" placeholder="Nombre" autocomplete="off" required>
+                <form class="signup-form container-form" id="signup-form">
+                  <div class="form-group">
+
+                    <div class="email-pass" id="container-name">
+                      <label for="name">.name</label>
+                      <input type="text" id="name" class="form-control mx-sm-3" aria-describedby="emailHelpInline" placeholder="Sparrow">
+                      <small id="nameHelpInline" class="text-muted">
+                        El nombre que da sentido a la vida.
+                      </small>
+                    </div>
+
+                    <div class="email-pass" id="container-email">
+                      <label for="email">.email</label>
+                      <input type="email" id="email" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="hol@caracola.cat">
+                      <small id="emaildHelpInline" class="text-muted">
+                        No olvides el @ ni el "dot".
+                      </small>
+                    </div>
+
+                    <div class="email-pass" id="container-password">
+                      <label for="password">.password</label>
+                      <input type="password" id="password" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="******">
+                      <small id="passwordHelpInline" class="text-muted">
+                          La contraseña debe contener 6 carácteres.
+                      </small>
+                    </div>
                     
+                    <div class="email-pass" id="container-repeat-password">
+                      <label for="repeat-password">.repeatPassword</label>
+                      <input type="password" id="repeat-password" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="******">
+                      <small id="repeat-passwordHelpInline" class="text-muted">
+                          La contraseña debe contener los mismos 6 carácteres.
+                      </small>
+                    </div>
+
+                    <div class="submit-check">
+                      <div class="custom-control custom-checkbox">
+                         <input type="checkbox" class="custom-control-input" id="condición">
+                         <label class="custom-control-label" for="condición">Acepto la condición de pasarlo bien.</label>
+                      </div>
+
+                      <div class="flex-column" id="container-login-btn">
+                         <button type="submit" class="btn btn-submit hvr-grow" id="signup-button">.registrarse=></button>
+                      </div>
+                      <div><a href="#">¿Algún problema?</a></div>
+                    </div>
                   </div>
-                    <input type="email" id="email" placeholder="Correo elecrtónico" autocomplete="off" required>
-                    <input type="password" id="password" placeholder="Contraseña" autocomplete="off" required>
-                    <input type="password" id="repeat-password" placeholder="Contraseña" autocomplete="off" required>
-
-                    <button type="submit" class="button" id="signin-button">Registrar</button>
-
                 </form>
                 <div class="errors-container"></div>
             </div>
-            
+
         </main>
     </section>
 

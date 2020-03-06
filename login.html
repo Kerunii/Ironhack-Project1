@@ -51,38 +51,47 @@
       </nav>
   </header>
 
-    <section class="first-section bg-dark">
+    <section class="first-section bg-dark full-height">
         <main class="container">
             <div class="column">
+
                 <div class="title-login col-sm-12 col-md-12 col-lg-12 col-xl-12">
                     <h2>Inicia sesión</h2>
                     <p>Accede a tu espacio personal.</p>
+                    <div id="mensaje-success" class="pulsate-bck"role="alert"></div>
+                    <div id="mensaje-error" class="error slide-in-blurred-bottom" role="alert"></div>
                 </div>
+
             </div>
+
             <div class="form-wrapper col-sm-12 col-md-10 col-lg-8 col-xl-8">
                 <form class="login-form container-form" id="login-form">
                     <div class="form-group">
+
                         <div class="email-pass" id="container-email">
-                            <label for="email">Email</label>
+                            <label for="email">.email</label>
                             <input type="email" id="email" class="form-control mx-sm-3" aria-describedby="emailHelpInline" placeholder="iron@avenger.cat">
                             <small id="emailHelpInline" class="text-muted">
                               El email debe ser viable o... ¡No pasarás!
                             </small>
                         </div>
+
                         <div class="email-pass" id="container-password">
-                            <label for="password">Password</label>
+                            <label for="password">.password</label>
                             <input type="password" id="password" class="form-control mx-sm-3" aria-describedby="passwordHelpInline" placeholder="130220">
                             <small id="passwordHelpInline" class="text-muted">
                                 La contraseña debe contener 6 carácteres.
                               </small>
                         </div>
+
                         <div class="submit-check">
                             <div class="custom-control custom-checkbox">
                                 <input type="checkbox" class="custom-control-input" id="rememberme">
                                 <label class="custom-control-label" for="rememberme">Recordar mi usuario</label>
                             </div>
+
                             <div class="flex-column" id="container-login-btn">
-                                <button type="submit" class="btn btn-submit hvr-grow" id="login-button">¡Ábrete sésamo!</button>
+                                <button type="submit" class="btn btn-submit hvr-grow" id="login-button">.entrar=></button>
                             </div>
                             <div><a href="#">¿Olvidaste la contraseña?</a></div>
                         </div>

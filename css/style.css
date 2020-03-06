@@ -8,6 +8,30 @@ html, body {
     cursor:url(../img/cursor-palomita.gif), pointer;
 }
 
+html, body {
+  height: 100%;
+}
+
+/* Footer */
+footer {
+    border-top: 3px solid #C0E5DE;
+    padding: 20px;
+    font-size: 0.5rem;
+    height: 10%;
+}
+footer > div {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.agradecimientos {
+    text-align: end;
+}
+  
+
+
 h1, h2 {
     font-family: "Lobster Two";
     color: #C0E5DE;;
@@ -32,6 +56,8 @@ h5 {
 .bg-green {
     background-color: #C0E5DE;
     color: #56646B;
+}
+header.bg-green {
     border-bottom: 3px solid #F6EDD9;
 }
 
@@ -122,20 +148,20 @@ header {
 /* ANIMATIONS */
 /* Animation Grow */
 .hvr-grow {
-    display: inline-block;
-    vertical-align: middle;
-    -webkit-transform: perspective(1px) translateZ(0);
-    transform: perspective(1px) translateZ(0);
-    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-    -webkit-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-property: transform;
-    transition-property: transform;
-  }
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
 .hvr-grow:hover, .hvr-grow:focus, .hvr-grow:active {
-  -webkit-transform: scale(1.1);
-  transform: scale(1.1);
-  color: #F46667;
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+    color: #F46667;
 }
 /* Animation pulsate */
 .pulsate-bck {
@@ -149,9 +175,9 @@ header {
 }
 
 
-/* Section Welcome */
+/* bg-red */
 .first-section {
-    padding-top: 71px;
+    padding-top: 81px;
 }
 
 .first-section article {
@@ -180,7 +206,7 @@ header {
     margin-top: 30px;
 }
 
-#steps {
+.steps {
     display: flex;
     flex-direction: column;
     padding: 0 60px;
@@ -188,7 +214,7 @@ header {
     text-align: center;
 }
 
-#steps span {
+.steps span {
     font-family: 'lobster two';
     color: #C0E5DE;
     text-shadow: 2px 2px #56646B;
@@ -212,24 +238,6 @@ span.logo {
 }
 
 
-/* Footer */
-footer {
-    height: 100%;
-    border-top: 3px solid #C0E5DE;
-    padding: 20px;
-    font-size: 0.5rem;
-}
-footer > div {
-    padding: 0 20px;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-.agradecimientos {
-    text-align: end;
-}
-
  @-webkit-keyframes pulsate-bck {
     0% {
       -webkit-transform: scale(1);
@@ -243,39 +251,69 @@ footer > div {
       -webkit-transform: scale(1);
               transform: scale(1);
     }
+}
+@keyframes pulsate-bck {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
   }
-  @keyframes pulsate-bck {
-    0% {
-      -webkit-transform: scale(1);
-              transform: scale(1);
-    }
-    50% {
-      -webkit-transform: scale(0.9);
-              transform: scale(0.9);
-    }
-    100% {
-      -webkit-transform: scale(1);
-              transform: scale(1);
-    }
+  50% {
+    -webkit-transform: scale(0.9);
+            transform: scale(0.9);
   }
-  
-  
-/* Registro */
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+
+/* bg-dark login */
 .title-login p {
     text-align: center;
-} 
- .first-section.bg-dark main {
-     padding: 20px 10px;
+  } 
+  
+.title-login h2 {
+    margin: 0;
+    padding: 30px 0 0 0;
+    text-align: center;
+}
+    div#mensaje-success {
+    font-size: 1.5rem;
+    padding: 10px 0;
+    text-align: center;
+    ;
+}
+
+.first-section.bg-dark main {
+     padding: 5% 10px;
      display: flex;
      flex-direction: column;
      align-content: space-between;
      align-items: center;
 }
+/* bg-green signup */
+.first-section.bg-green main {
+    padding: 5% 10px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    align-items: center;
+}
 
-.email-pass > label {
+.bg-dark .email-pass > label {
     font-family: 'lobster two';
     font-size: 1.3rem;
     color: #F6EDD9;
+    text-indent: 0.2rem;
+    padding: 20px 0 5px 0;
+    text-decoration-line: underline;
+}
+
+.bg-green .email-pass > label {
+    font-family: 'lobster two';
+    font-size: 1.3rem;
+    color: #56646B;
     text-indent: 0.2rem;
     padding: 20px 0 5px 0;
     text-decoration-line: underline;
@@ -288,11 +326,6 @@ footer > div {
     margin-top: 10px;
 }
 
-.title-login > h2 {
-    margin: 0;
-    padding: 30px 0 0 0;
-    text-align: center;
-}
 
 .submit-check {
     display: flex;
@@ -308,17 +341,13 @@ footer > div {
     margin-top: 20px;
 }
 
-.submit-check div > a {
-    color: #F46667;
-}
-
 .btn {
     padding: 10px 100px;
 }
 
 /* bootstrap arranges */
 
-.btn-submit {
+.bg-dark .btn-submit {
     color: #F6EDD9;
     background-color: transparent;
     border-color: #F6EDD9;
@@ -326,13 +355,111 @@ footer > div {
     font-weight: 300;
   }
   
-.btn-submit:hover {
+.bg-dark .btn-submit:hover {
     color: #56646B;
     background-color: #C0E5DE;
     border-color: #F6EDD9;
     letter-spacing: 0.1em;
     font-weight: 500;
 }
+
+.bg-green .btn-submit {
+    color: #56646B;
+    background-color: transparent;
+    border-color: #F6EDD9;
+    font-family: 'dosis';
+    font-weight: 300;
+}
+  
+.bg-green .btn-submit:hover {
+    color: #F6EDD9;
+    background-color: #F46667;
+    border-color: #F6EDD9;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+}
+
+.first-section.bg-green h2 {
+    color: #F46667;;
+    text-shadow: 2px 2px #56646B;
+}
+
+/* mensajes */
+.error {
+    text-justify: center;
+    align-items: center;
+    text-align: center;
+
+}
+.error-class {
+    color: #F46667;
+}
+#mensaje-success {
+    font-size: 40px;
+    color:  #C0E5DE;
+    font-family: 'lobster two';
+    text-align: center;
+}
+#mensaje-error {
+    font-size: 35px;
+    color:  #F46667;
+    font-family: 'lobster two';
+    text-align: center;
+}
+/* movie */
+/* bg-dark movie */
+#movie-section.bg-dark {
+    padding: 61px 10px;
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    align-items: center;
+    justify-content: center;
+}
+
+#movie-section .title-login{
+    padding-top: 10%;
+
+}
+
+#movie-section.bg-dark h2 {
+    color: #F46667;
+    text-shadow: 2px 2px #C0E5DE;
+    font-size: 55px;
+    font-weight: 900;
+    font-style: italic;
+    text-decoration:underline;
+}
+
+#movie-section img {
+    background: url('http://image.tmdb.org/t/p/w185//${movie.poster_path}') no-repeat;
+    background-size: 0;
+    display: flex;
+    flex-flow: row;
+    width: 100%;
+    height: 550px;
+    align-items: center;
+}
+
+#movie-section.bg-dark h4 {
+    font-size: 45px;
+    padding-top: 30px;
+    color: #C0E5DE;
+}
+
+article#movie {
+    padding: 5% 0 5% 0;
+}
+
+.first-section.bg-red#recipe {
+    padding: 10% 10px;
+    height: 100%; 
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+    align-items: center;
+}
+
 
 
 
@@ -345,3 +472,4 @@ footer > div {
       -ms-flex-pack: start;
       justify-content: flex-start;
     }
+}

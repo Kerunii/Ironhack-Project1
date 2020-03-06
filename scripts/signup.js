@@ -6,9 +6,10 @@ let repeatPassword = document.getElementById("repeat-password");
 
 // Formulario y botón - definimos variables con valor de la classe de nuestro doc HTML
 let logInButton = document.getElementById("log-in-button");
-let form = document.getElementsByClassName("signup-form")[0]; //para qué es el 0?
+let form = document.querySelector("form"); //para qué es el 0?
 let formWrapper = document.getElementsByClassName("form-wrapper")[0];
-let signUpButton = document.getElementsByClassName("button")[0];
+let signUpButton = document.getElementById("signup-button");
+let locationMessage = document.getElementsByClassName('email-pass')[0];
 
 //Base de Datos donde se guardan los datos introducidos - para comprobar en el login
 let usersDB = JSON.parse(localStorage.getItem('users'));
@@ -16,8 +17,8 @@ console.log(usersDB);
 
 //Botón submit - al hacer click invoca la función
 signUpButton.addEventListener("click", function(event){
-    console.log("Comprobar: el signUpButton funciona"); //--> no funciona porque necesita--> ver punto 0
-    console.log("Comprobar: qué es el 'event' del argumento"); //--> lista de propiedades del elemento
+ //   console.log("Comprobar: el signUpButton funciona"); //--> no funciona porque necesita--> ver punto 0
+ //   console.log("Comprobar: qué es el 'event' del argumento"); //--> lista de propiedades del elemento
     //0- parar el efecto por default del botón
     event.preventDefault();
     //1- comprobar que los imputs sean válidos
@@ -32,12 +33,7 @@ signUpButton.addEventListener("click", function(event){
         // *** createUser -> crea el usuario para guardarlo en la BD
         //LLAMAR o INVOKAR el valor de los parámetros (parametro.valor)
         createUser(userName.value, email.value, password.value);
-        let messageSuccess = document.createElement("div");
-        messageSuccess.innerHTML = `
-            <div class="alert alert-success" role="alert">
-            <strong>¡Hecho!</strong> Ya formas parte de la comunidad de la manta.
-            </div>`;
-        formWrapper.appendChild(messageSuccess);
+        let signUser = document.getElementById('mensaje-success').innerHTML = `¡Hecho! Ya formas parte de la comunidad de la manta.`;
     }
 });
 

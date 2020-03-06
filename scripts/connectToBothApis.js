@@ -17,15 +17,15 @@ const connectToApis = () => {
     .then (movieArrayData => movie = movieArrayData[randomMovie])
     .then (getElement => document.getElementById("movie").innerHTML = `
     <div class="row">
-    <div class="col-sm-12 col-lg-4">
-    <img src="http://image.tmdb.org/t/p/w185//${movie.poster_path}" alt="poster-${movie.title}">
-    </div>
-    <div class="text-movie col-sm-12 col-lg-4">
-        <h3>${movie.title}</h3>
-        <p><span>Año: ${movie.release_date.split("-")[0]}</span> <span>Puntuación :${movie.vote_average}</span></p>
-        <h4>Sinopsis</h4>
-        <p>${movie.overview}</p>
-    </div>
+        <div class="col-sm-12 col-md-12 col-lg-5 col-xl-5">
+            <img class="img-fluid rounded-lg border border-white" src="http://image.tmdb.org/t/p/w185//${movie.poster_path}" alt="poster-${movie.title}">
+        </div>
+        <div class="text-movie col-sm-12 col-md-12 col-lg-7 col-xl-7">
+            <h2>${movie.title}</h2>
+            <h4>.sinopsis{</h4>
+            <p>${movie.overview}</p>
+            <p>Año:  ${movie.release_date.split("-")[0]} <br> Puntuación:  ${movie.vote_average}</p>
+        </div>
     </div>`)
     
     fetch(apiRecipeURL)
@@ -33,9 +33,11 @@ const connectToApis = () => {
     .then (data => recipeArray = data.hits)
     .then (recipeData => recipe = recipeData[randomRecipe].recipe)
     .then (getElement => document.getElementById("recipe").innerHTML = `
-        <div>
-           <a href="${recipe.url}"></a><img src="${recipe.image}" alt="${recipe.source}">
-           <h2>${recipe.label}</h2>
+        <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12">
+                <a href="${recipe.url}"><img class="img-fluid rounded-lg border border-white" src="${recipe.image}" alt="${recipe.source}"></a>
+                <h2>${recipe.label}</h2>
+            </div>
         </div>
         `)
     .catch(function (error) {

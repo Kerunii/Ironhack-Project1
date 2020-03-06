@@ -8,7 +8,6 @@
 
 let email = document.getElementById("email");
 let password = document.getElementById("password");
-console.log('maaaaaaaiiiiilllll',email);
 let form = document.querySelector("form");
 let formWrapper = document.getElementsByClassName("form-wrapper")[0];
 let logInButton = document.getElementById("login-button");
@@ -18,28 +17,31 @@ let containerPassword = document.getElementById("container-password");
 let containerLoginBtn = document.getElementById("container-login-btn");
 let titleLogin = document.getElementsByClassName("title-login")[0];
 
+function deleteErrors (){
+    let errors = [...document.getElementsByClassName("error")];
+    errors ? errors.forEach(error => error.remove()) : null;
+}
+
 logInButton.addEventListener("click", function(event){
-    event.preventDefault()
+    event.preventDefault();
+
     if(checkValidUser()){
         console.log("Valid User");
     }
 });
 
 function checkValidUser() {
-    console.log(email.value);
+    //console.log(email.value);
     let loginValidator = new LogInValidator(email.value, password.value);
 
-    let userDB = JSON.parse(localStorage.getItem("users"));
+    let usersDB = JSON.parse(localStorage.getItem("users"));
 
-    if(loginValidator.checkEmailAndPasswordInDB(userDB)) {
-        let messageSuccess = document.createElement("div");
-        messageSuccess.innerHTML = `
-            <div class="alert alert-success" role="alert">
-            <strong>¡Hecho!</strong> Ya formas parte de la comunidad de la manta.
-            </div>`;
-        titleLogin.appendChild(messageSuccess);
-    } else {
-        loginValidator.errorCreator("El usuario o la contraseña no están registrados.");
+    if(!loginValidator.checkEmailAndPasswordInDB(usersDB)) {
+        document.getElementById('mensaje-error').innerHTML = `Usuario o contraseña incorrectos`;
         return false;
+    } else {
+        deleteErrors();
+        let logUser = usersDB.filter(e=> email.value === e.email);
+        document.getElementById('mensaje-success').innerHTML = `¡Saludos, ${logUser[0].name}!`;
     }
 }

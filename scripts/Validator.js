@@ -28,10 +28,13 @@ class Validator {
 
     //Mensaje que se muestra al saltar error
     errorCreator (message, location) {
-        let div = document.createElement("div"); //se crea un div en el HTML
-        div.setAttribute("class", "error"); // le asignamos una class="error" --> <div class="error"></div>
-        div.innerHTML = message; // introducimos el mensaje definido en login.js *
-        form.insertBefore(div, location); // dónde coloca el mensaje -> dentro del div creado, localización marcada dentro del message *
+        location.value = ""
+        location.placeholder = message
+        location.classList.add("error-class");
+        //let div = document.createElement("div"); //se crea un div en el HTML
+        //div.setAttribute("class", "error"); // le asignamos una class="error" --> <div class="error"></div>
+        //div.innerHTML = message; // introducimos el mensaje definido en login.js *
+        //locationMessage.insertBefore(div, location); // dónde coloca el mensaje -> dentro del div creado, localización marcada dentro del message *
     }
 
     //Borra el error que salta al introducirlo bien
