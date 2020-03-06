@@ -482,7 +482,7 @@ article#recipe {
     padding: 0 inherit;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 #recipe-section p {
