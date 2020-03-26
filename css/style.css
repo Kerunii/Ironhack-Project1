@@ -134,11 +134,11 @@ header {
 }
 
 .navbar-light .navbar-toggler-icon {
-    background-image: url("./img/ham-menu-dark.svg");
+    background-image: image("img/ham-menu-dark.svg");
 }
 
 .navbar-light .navbar-toggler-icon:hover {
-    background-image: url("./img/ham-menu-red.svg");
+    background-image: image("img/ham-menu-red.svg");
     -webkit-transition-duration: 0.3s;
 }
 /* /bootstrap END */
